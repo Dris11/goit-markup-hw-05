@@ -17,6 +17,12 @@
         <title>Web Studio</title>
     </head>
     <body>
+        <!-- MODAL -->
+        <div class="modal">
+            <div class="inner-div">
+                <button>Close</button>
+            </div>
+        </div>
         <!-- HEADER SECTION -->
         <div class="header-container">
             <div class="container">
@@ -27,15 +33,15 @@
                     <!-- NAVIGATION SECTION -->
                     <nav class="header-navigation">
                         <ul class="navigation-list unstyled-list">
-                            <li>
+                            <li class="nav-link">
                                 <a class="nav-list-item" href="#">Studio</a>
                             </li>
-                            <li>
+                            <li class="nav-link">
                                 <a class="nav-list-item" href="portfolio.html"
                                     >Portfolio</a
                                 >
                             </li>
-                            <li>
+                            <li class="nav-link">
                                 <a class="nav-list-item" href="contacts.html"
                                     >Contacts</a
                                 >
@@ -49,7 +55,7 @@
                                 class="contact-list-item"
                                 href="mailto:info@devstudio.com"
                             >
-                                <svg class="icon-hover" width="16" height="12">
+                                <svg width="16" height="12">
                                     <use
                                         href="images/symbols.svg#icon-envelope"
                                     ></use>
@@ -62,7 +68,7 @@
                                 class="phone-header contact-list-item"
                                 href="tel:+12127724150"
                             >
-                                <svg class="icon-hover" width="16" height="12">
+                                <svg width="16" height="12">
                                     <use
                                         href="images/symbols.svg#icon-smartphone"
                                     ></use>
@@ -76,6 +82,7 @@
         </div>
         <main>
             <!-- REQUEST SECTION -->
+
             <section class="request-section">
                 <h1 class="request-section-title">
                     EFFECTIVE SOLUTIONS FOR <br />
@@ -156,33 +163,48 @@
                     <h2 class="what-we-do-title">What we do</h2>
                     <ul class="what-we-do-list unstyled-list">
                         <li>
-                            <img
-                                class="what-we-do-items"
-                                width="370"
-                                height="297"
-                                src="images/img1.jpg"
-                                alt="Writing code on a PC"
-                            />
+                            <div class="what-we-do-container">
+                                <div class="what-we-do-comment">
+                                    <p>DESKTOP APPS</p>
+                                </div>
+                                <img
+                                    class="what-we-do-items"
+                                    width="370"
+                                    height="297"
+                                    src="images/img1.jpg"
+                                    alt="Writing code on a PC"
+                                />
+                            </div>
                         </li>
                         <li>
-                            <img
-                                class="what-we-do-items"
-                                width="370"
-                                height="297"
-                                src="images/img2.jpg"
-                                alt="Coding on a
+                            <div class="what-we-do-container">
+                                <div class="what-we-do-comment">
+                                    <p>MOBILE APPS</p>
+                                </div>
+                                <img
+                                    class="what-we-do-items"
+                                    width="370"
+                                    height="297"
+                                    src="images/img2.jpg"
+                                    alt="Coding on a
                                 Laptop"
-                            />
+                                />
+                            </div>
                         </li>
                         <li>
-                            <img
-                                class="what-we-do-items"
-                                width="370"
-                                height="297"
-                                src="images/img3.jpg"
-                                alt="Styling on a
+                            <div class="what-we-do-container">
+                                <div class="what-we-do-comment">
+                                    <p>DESIGN SOLUTIONS</p>
+                                </div>
+                                <img
+                                    class="what-we-do-items"
+                                    width="370"
+                                    height="297"
+                                    src="images/img3.jpg"
+                                    alt="Styling on a
                                 Tablet"
-                            />
+                                />
+                            </div>
                         </li>
                     </ul>
                 </section>
