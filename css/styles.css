@@ -206,6 +206,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 250ms linear;
 }
 
 .inner-div {
@@ -215,6 +216,11 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
 }
 
 /* STRENGHTS SECTION */
@@ -617,10 +623,13 @@ body {
 }
 
 .overlay {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     height: 294px;
     width: 370px;
     position: absolute;
-    background: blue;
+    background: rgba(33, 150, 243, 0.9);
     transform: translateY(102%);
     transition: transform 250ms linear;
     opacity: 0.5;
@@ -628,6 +637,20 @@ body {
 
 .card-top:hover .overlay {
     transform: translateY(0px);
+}
+
+.overlay-text {
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+    width: 322px;
+    height: 170px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-align: left;
 }
 
 /*  */
