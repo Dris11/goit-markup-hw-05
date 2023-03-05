@@ -5,6 +5,8 @@
     --brand-color-dark: #212121;
     --brand-color-light: #757575;
     --brand-color-background: #2f303a;
+    --transition-duration: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* GLOBALS */
@@ -104,7 +106,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--brand-color-dark);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-duration) var(--timing-function);
 }
 
 .nav-link {
@@ -202,14 +204,17 @@ body {
 
 .modal {
     background: rgba(0, 0, 0, 0.2);
-    position: absolute;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transition: opacity var(--transition-duration) var(--timing-function);
 }
 
 .inner-div {
@@ -223,7 +228,8 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 2s var(--timing-function);
 }
 
 .is-hidden {
@@ -404,7 +410,8 @@ body {
     height: 44px;
     width: 44px;
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition-duration)
+        var(--timing-function);
 }
 
 .icon-list-item:hover,
@@ -414,7 +421,7 @@ body {
 
 .team-icon {
     fill: #afb1b8;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition-duration) var(--timing-function);
 }
 
 .team-icon:hover,
@@ -433,7 +440,7 @@ body {
     border: 1px solid #afb1b8;
     border-radius: 4px;
     fill: #afb1b8;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color var(--transition-duration) var(--timing-function);
 }
 
 .icons-customers-list {
@@ -450,7 +457,7 @@ body {
 
 .icon {
     fill: #afb1b8;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition-duration) var(--timing-function);
 }
 
 .icon:hover,
@@ -505,7 +512,7 @@ body {
 .phone-nr-footer,
 .email-footer {
     color: rgba(255, 255, 255, 0.6);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-duration) var(--timing-function);
 }
 
 .footer-logo-1 {
@@ -526,7 +533,7 @@ body {
 }
 
 .address {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-duration) var(--timing-function);
 }
 
 .address:hover,
@@ -584,8 +591,8 @@ body {
 
     cursor: pointer;
     transition-property: background-color, color, box-shadow;
-    transition-duration: 250ms;
-    transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--transition-duration);
+    transition-delay: var(--timing-function);
 }
 
 .p-button:hover,
@@ -610,7 +617,7 @@ body {
     flex: 0 1 24%;
     background: #ffffff;
     border: 1px solid #eeeeee;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--transition-duration) var(--timing-function);
 }
 
 .p-item:hover,
@@ -642,7 +649,7 @@ body {
 .card-top {
     overflow: hidden;
     position: relative;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition-duration) var(--timing-function);
 }
 
 .overlay {
